@@ -1,0 +1,56 @@
+thread 'main' panicked at /rust/deps/ignore-0.4.20/src/gitignore.rs:227:9:
+path is expected to be under the root
+stack backtrace:
+   0:     0x7d2e9ef73f35 - std::backtrace_rs::backtrace::libunwind::trace::hb4d9489fd44693d7
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/../../backtrace/src/backtrace/libunwind.rs:105:5
+   1:     0x7d2e9ef73f35 - std::backtrace_rs::backtrace::trace_unsynchronized::hc127ae13eb382434
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/../../backtrace/src/backtrace/mod.rs:66:5
+   2:     0x7d2e9ef73f35 - std::backtrace::Backtrace::create::h17543674482a4e85
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/backtrace.rs:331:13
+   3:     0x7d2e9ef73e85 - std::backtrace::Backtrace::force_capture::hc7a04463aac8b430
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/backtrace.rs:312:9
+   4:     0x7d2e9ba3e28d - std[ecfbcdfc4208362d]::panicking::update_hook::<alloc[3a01fc433f519bd6]::boxed::Box<rustc_driver_impl[5adc5be7beabf23e]::install_ice_hook::{closure#0}>>::{closure#0}
+   5:     0x7d2e9ef8ee76 - <alloc::boxed::Box<F,A> as core::ops::function::Fn<Args>>::call::h553ed1885c0b1acd
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/alloc/src/boxed.rs:2036:9
+   6:     0x7d2e9ef8ee76 - std::panicking::rust_panic_with_hook::hca3ced3c46879131
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/panicking.rs:799:13
+   7:     0x5f5757a505ed - std[ecfbcdfc4208362d]::panicking::begin_panic::<&str>::{closure#0}
+   8:     0x5f5757a27556 - std[ecfbcdfc4208362d]::sys_common::backtrace::__rust_end_short_backtrace::<std[ecfbcdfc4208362d]::panicking::begin_panic<&str>::{closure#0}, !>
+   9:     0x5f5757a22c4a - std[ecfbcdfc4208362d]::panicking::begin_panic::<&str>
+  10:     0x5f5757ab77fe - <rustfmt_nightly[b316cd040e775ca4]::ignore_path::IgnorePathSet>::is_match
+  11:     0x5f57579a4146 - <core[865240e3691f744c]::iter::adapters::filter::Filter<alloc[3a01fc433f519bd6]::collections::btree::map::IntoIter<rustfmt_nightly[b316cd040e775ca4]::config::file_lines::FileName, rustfmt_nightly[b316cd040e775ca4]::modules::Module>, rustfmt_nightly[b316cd040e775ca4]::formatting::format_project<rustfmt_nightly[b316cd040e775ca4]::Session<std[ecfbcdfc4208362d]::io::stdio::Stdout>>::{closure#1}> as core[865240e3691f744c]::iter::traits::iterator::Iterator>::next
+  12:     0x5f575799c7fc - <rustfmt_nightly[b316cd040e775ca4]::Session<std[ecfbcdfc4208362d]::io::stdio::Stdout>>::format_input_inner::{closure#0}
+  13:     0x5f57579b2452 - rustfmt[abaa2239e6566958]::format_and_emit_report::<std[ecfbcdfc4208362d]::io::stdio::Stdout>
+  14:     0x5f57579b0205 - rustfmt[abaa2239e6566958]::execute
+  15:     0x5f57579abcf4 - rustfmt[abaa2239e6566958]::main
+  16:     0x5f57579966f3 - std[ecfbcdfc4208362d]::sys_common::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17:     0x5f5757998aa9 - std[ecfbcdfc4208362d]::rt::lang_start::<()>::{closure#0}
+  18:     0x7d2e9ef70cb0 - core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once::h05e5fc3ed039dc6b
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/core/src/ops/function.rs:284:13
+  19:     0x7d2e9ef70cb0 - std::panicking::try::do_call::hf4fa5da1702a7d33
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/panicking.rs:559:40
+  20:     0x7d2e9ef70cb0 - std::panicking::try::h0965acaf2bd52050
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/panicking.rs:523:19
+  21:     0x7d2e9ef70cb0 - std::panic::catch_unwind::h7de95711cd7e4428
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/panic.rs:149:14
+  22:     0x7d2e9ef70cb0 - std::rt::lang_start_internal::{{closure}}::hb1d2daa487425280
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/rt.rs:141:48
+  23:     0x7d2e9ef70cb0 - std::panicking::try::do_call::hd59af035bb5532e5
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/panicking.rs:559:40
+  24:     0x7d2e9ef70cb0 - std::panicking::try::h5c744d815e99837d
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/panicking.rs:523:19
+  25:     0x7d2e9ef70cb0 - std::panic::catch_unwind::hef381c98182948e1
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/panic.rs:149:14
+  26:     0x7d2e9ef70cb0 - std::rt::lang_start_internal::ha4d5687999a05b44
+                               at /rustc/c987ad527540e8f1565f57c31204bde33f63df76/library/std/src/rt.rs:141:20
+  27:     0x5f57579b3605 - main
+  28:     0x7d2e9862a1ca - __libc_start_call_main
+                               at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+  29:     0x7d2e9862a28b - __libc_start_main_impl
+                               at ./csu/../csu/libc-start.c:360:3
+  30:     0x5f57579858c9 - <unknown>
+  31:                0x0 - <unknown>
+
+
+rustc version: 1.80.0-nightly (c987ad527 2024-05-01)
+platform: x86_64-unknown-linux-gnu

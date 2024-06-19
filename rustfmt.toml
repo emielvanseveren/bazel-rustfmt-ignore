@@ -1,0 +1,9 @@
+max_width = 100
+
+imports_granularity = "Module"
+group_imports = "StdExternalCrate"
+
+# Ignore is currently broken, follow these issues for updates:
+# https://github.com/rust-lang/rustfmt/issues/6185
+# https://github.com/rust-lang/rustfmt/issues/3395
+ ignore = ["./crates/app"]
