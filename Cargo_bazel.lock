@@ -1,5 +1,5 @@
 {
-  "checksum": "ae89302fd34dd906f1ce7364bcec1c0e0558a73e26a3922d1d32c8027ddd241c",
+  "checksum": "836bf40a9d2329d738adcdd0b4ec1c00537b08f02edcdee04573d74d22fd1492",
   "crates": {
     "cfg-if 1.0.0": {
       "name": "cfg-if",
